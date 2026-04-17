@@ -1,9 +1,9 @@
 # Copyright date and release version should be updated accordingly!
 
-project = 'LimeSDR Mini 2.0'
-copyright = '2025 Lime Microsystems'
+project = 'LimeSDR Mini v2'
+copyright = '2024-2026 Lime Microsystems'
 author = 'Lime Microsystems'
-release = 'latest'
+release = 'v2.4'
 
 # These are used for the "Edit on GitHub" links.
 # github_repo_path should be set to the branch + path to the docs.
@@ -19,7 +19,9 @@ highlight_language = 'console'
 # Intersphinx mapping
 # To minimise build time only include projects that are referenced.
 intersphinx_internal = [
-#    'suiteng',
+    'quickstart',
+    'sdrgw',
+    'suiteng',
 ]
 
 intersphinx_external = [
