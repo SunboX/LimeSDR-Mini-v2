@@ -5,7 +5,7 @@ From time to time it may be necessary to reprogram the FPGA configuration FLASH 
 
 It should usually be possible to program the LimeSDR Mini board using software only, with the device connected via USB interface. However, in case of corrupted FLASH memory or other issues, JTAG programming may be required.
 
-To start with download a `pre-compiled programming file`_ (.bin). Then proceed to use the pure software programming method described below, unless it has been determined that JTAG programming is necessary.
+To start with download a `pre-compiled programming file`_ (.bit). Then proceed to use the pure software programming method described below, unless it has been determined that JTAG programming is necessary.
 
 Software Programming
 ********************
@@ -25,7 +25,7 @@ The programming options can be accessed in the :code:`limeGUI` application under
 To program:
 
 #. Set Programming mode to FPGA/FLASH.
-#. Select the image .bin file you wish to use by pressing Open. 
+#. Select the image .bit file you wish to use by pressing Open. 
 #. Initiate programming by pressing Program.
 
 .. figure:: /images/LimeSDR-Mini_v2_PROGGUI.png
@@ -41,7 +41,7 @@ Programming can also be achieved using the CLI application :code:`limeFLASH` tha
 The relevant options:
 
 * device - to choose LimeSDR Mini v2 type :code:`Mini`.
-* target - to set programming mode type :code:`FPGA/FLASH` and add location to .bin file. 
+* target - to set programming mode type :code:`FPGA/FLASH` and add location to .bit file. 
 
 ..  code-block:: shell
     :caption: Programming via the CLI
@@ -49,7 +49,7 @@ The relevant options:
     limeFLASH --device Mini --target FPGA/FLASH <path_to>/limesdr_mini_v2.bit
 
 .. note::
-  :code:`<path_to>/limesdr_mini_v2.bit` should be replaced by the actual path to your chosen .bin file
+  :code:`<path_to>/limesdr_mini_v2.bit` should be replaced by the actual path to your chosen .bit file
 
 .. _pre-compiled programming file: https://github.com/myriadrf/LimeSDR_GW/blob/master/bitstream/LimeSDR_Mini_V2/limesdr_mini_v2.bit
 
